@@ -11,7 +11,7 @@ const NavBar = () => {
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#050A30] text-gray-300">
       <div>
-        <img src={Logo} alt="logo image" style={{ width: "200px" }} />
+        <img src={Logo} alt="logo" style={{ width: "200px" }} />
       </div>
 
       {/* Menu */}
@@ -42,7 +42,7 @@ const NavBar = () => {
       </ul>
 
       {/* Social Icons */}
-      <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
+      <div className="hidden xl:flex fixed flex-col top-[35%] left-0">
         <ul>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#0072B1]">
             <a
