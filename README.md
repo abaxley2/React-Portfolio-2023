@@ -6,7 +6,7 @@ This application is a demo of my abilities to create and deploy a React applicat
 
 This is a portfolio of my recent works as I grow in web-development. I have included a descriptive about me section as well as links to my github, linkdin, email address, and projects.
 
-![Portfolio Picture of Work]()
+![Portfolio Picture of Work](https://raw.githubusercontent.com/abaxley2/React-Portfolio-2023/main/src/assets/React-Portfolio.png)
 
 ## Dependencies
 
