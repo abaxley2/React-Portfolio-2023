@@ -1,4 +1,3 @@
-/* eslint-disable no-template-curly-in-string */
 import React from "react";
 import MarketFinder from "../assets/MarketFinder.png";
 import GetMoneySmart from "../assets/GetMoneySmart.png";
@@ -15,10 +14,13 @@ const Work = () => {
         </div>
 
         <div
-          style={{ backgroundImage: `url(${MarketFinder})` }}
+          //   style={{ backgroundImage: `url(${MarketFinder})` }}
           className="grid sm:grid-cols-2 md:grid-cols-3 gap-4"
         >
-          <div className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div">
+          <div
+            style={{ backgroundImage: `url(${MarketFinder})` }}
+            className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
+          >
             {/* hover effects */}
             <div className="opacity-0 group-hover:opacity-100">
               <span className="text-2xl fond-bold text-[#ccd6f6] tracking-wider">
