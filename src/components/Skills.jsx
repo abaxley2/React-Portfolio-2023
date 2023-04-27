@@ -1,14 +1,14 @@
 import React from "react";
-import HTML from "../assets/html-5.svg";
-import CSS from "../assets/css-3.svg";
-import JavaScript from "../assets/javascript.svg";
-import jQuery from "../assets/jquery.svg";
-import MongoDB from "../assets/mongodb-icon.svg";
-import MySQL from "../assets/mysql-icon.svg";
-import Nodejs from "../assets/nodejs.svg";
-import Reactjs from "../assets/react.svg";
-import TailwindCSS from "../assets/tailwindcss-icon.svg";
-import BootstrapCSS from "../assets/bootstrap.svg";
+import HTML from "../assets/HTML.png";
+import CSS from "../assets/CSS.png";
+import JavaScript from "../assets/JavaScript.png";
+import jQuery from "../assets/JQueary.png";
+import MongoDB from "../assets/MongoDB.png";
+import MySQL from "../assets/MySQL.png";
+import Nodejs from "../assets/Node.png";
+import Reactjs from "../assets/Reactjs.png";
+import TailwindCSS from "../assets/TailwindCSS.png";
+import BootstrapCSS from "../assets/BootstrapCSS.png";
 
 const Skills = () => {
   return (
