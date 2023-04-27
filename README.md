@@ -10,10 +10,10 @@ This is a portfolio of my recent works as I grow in web-development. I have incl
 
 ## Dependencies
 
-Technologies:
--React
--Node
--Tailwind CSS
+Technologies:  
+-React  
+-Node  
+-Tailwind CSS  
 
 ## Authors
 
