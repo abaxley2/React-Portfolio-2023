@@ -1,5 +1,6 @@
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
+// import { Link } from "react-scroll";
 
 const Home = () => {
   return (
@@ -20,7 +21,7 @@ const Home = () => {
           addition to any team.
         </p>
         <div>
-          <button className="text-white group font-bold border-2 px-6 py-3 my-2 flex items-center hover:bg-[#7EC8E3] hover:border-[#7EC8E3]">
+          <button className="hidden text-white group font-bold border-2 px-6 py-3 my-2 flex items-center hover:bg-[#7EC8E3] hover:border-[#7EC8E3]">
             View Work
             <span className="group-hover:rotate-180 duration-300">
               <HiArrowNarrowRight className="ml-3" />
