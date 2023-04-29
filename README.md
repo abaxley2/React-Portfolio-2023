@@ -14,6 +14,8 @@ Technologies:
 -React  
 -Node  
 -Tailwind CSS  
+-Getform.io
+-Canva
 
 ## Authors
 
