@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/React-Portfolio-2023/static/css/main.7bef80de.css",
-    "main.js": "/React-Portfolio-2023/static/js/main.aded9445.js",
+    "main.css": "/React-Portfolio-2023/static/css/main.7fb0df3a.css",
+    "main.js": "/React-Portfolio-2023/static/js/main.e2f25760.js",
     "static/media/MarketFinder.png": "/React-Portfolio-2023/static/media/MarketFinder.4a0a9c4e2fd3c08e02c6.png",
     "static/media/Workout.png": "/React-Portfolio-2023/static/media/Workout.3d5bf026551857592d09.png",
     "static/media/GetMoneySmart.png": "/React-Portfolio-2023/static/media/GetMoneySmart.ff1de8445c43e5fa8767.png",
@@ -13,14 +13,15 @@
     "static/media/HTML.png": "/React-Portfolio-2023/static/media/HTML.2ba4fabc69a89a8f71e6.png",
     "static/media/TailwindCSS.png": "/React-Portfolio-2023/static/media/TailwindCSS.e47ac876b8d4d0bba47a.png",
     "static/media/CSS.png": "/React-Portfolio-2023/static/media/CSS.69a82c2d9e45c933a9cb.png",
+    "static/media/FireBase.png": "/React-Portfolio-2023/static/media/FireBase.d725ecadd89697efc832.png",
     "static/media/Logo.png": "/React-Portfolio-2023/static/media/Logo.8f9cb12d7ec3f877707e.png",
     "static/media/JavaScript.png": "/React-Portfolio-2023/static/media/JavaScript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/React-Portfolio-2023/index.html",
-    "main.7bef80de.css.map": "/React-Portfolio-2023/static/css/main.7bef80de.css.map",
-    "main.aded9445.js.map": "/React-Portfolio-2023/static/js/main.aded9445.js.map"
+    "main.7fb0df3a.css.map": "/React-Portfolio-2023/static/css/main.7fb0df3a.css.map",
+    "main.e2f25760.js.map": "/React-Portfolio-2023/static/js/main.e2f25760.js.map"
   },
   "entrypoints": [
-    "static/css/main.7bef80de.css",
-    "static/js/main.aded9445.js"
+    "static/css/main.7fb0df3a.css",
+    "static/js/main.e2f25760.js"
   ]
 }
