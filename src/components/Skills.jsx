@@ -9,6 +9,7 @@ import Nodejs from "../assets/Node.png";
 import Reactjs from "../assets/Reactjs.png";
 import TailwindCSS from "../assets/TailwindCSS.png";
 import BootstrapCSS from "../assets/BootstrapCSS.png";
+import Firebase from "../assets/FireBase.png";
 
 const Skills = () => {
   return (
@@ -64,6 +65,10 @@ const Skills = () => {
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
             <img className="w-20 mx-auto" src={BootstrapCSS} alt="HTML icon" />
             <p className="my-4">BootstrapCSS</p>
+          </div>
+          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
+            <img className="w-20 mx-auto" src={Firebase} alt="HTML icon" />
+            <p className="my-4">Firebase</p>
           </div>
         </div>
       </div>
