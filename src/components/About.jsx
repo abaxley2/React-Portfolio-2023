@@ -1,7 +1,9 @@
+// import React Library
 import React from "react";
 
 const About = () => {
   return (
+    // create container
     <div name="about" className="w-full h-screen bg-[#050A30] text-[#ccd6f6]">
       <div className="flex flex-col justify-center items-center w-full h-full">
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
@@ -41,4 +43,5 @@ const About = () => {
   );
 };
 
+// Export the 'About' component
 export default About;
