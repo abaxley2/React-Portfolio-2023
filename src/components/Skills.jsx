@@ -70,6 +70,7 @@ const Skills = () => {
             <img className="w-20 mx-auto" src={Firebase} alt="HTML icon" />
             <p className="my-4">Firebase</p>
           </div>
+          {/* copy one of the divs above and add below */}
         </div>
       </div>
     </div>
