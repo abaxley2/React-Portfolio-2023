@@ -1,57 +1,227 @@
-import React from "react";
-import MarketFinder from "../assets/MarketFinder.png";
-import GetMoneySmart from "../assets/GetMoneySmart.png";
-import WorkoutTracker from "../assets/Workout.png";
+import React, { useEffect, useRef } from "react";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import LocksbyLindsay from "../assets/LocksbyLindsay.png";
+import ChatApp from "../assets/ChatApp.png";
+import MarketFinderImg from "../assets/MarketFinderNew.png";
+
+const projects = [
+  {
+    title: "Locks by Lindsay",
+    description:
+      "High-conversion editorial-style web platform built for a specialist hair studio in Cartersville, GA. Features transparent pricing, live Instagram feed integration, and a dynamic client review slider.",
+    image: LocksbyLindsay,
+    tags: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS"],
+    demo: null,
+    code: "https://github.com/abaxley2/locks-by-lindsay",
+    featured: true,
+  },
+  {
+    title: "Chat App",
+    description:
+      "Real-time chat application built with React and Firebase. Users can sign in, join chat rooms, and exchange messages instantly. Firebase Realtime Database and Authentication power the backend.",
+    image: ChatApp,
+    tags: ["React", "Firebase", "Firebase Auth", "Realtime DB"],
+    demo: null,
+    code: "https://github.com/abaxley2/Chat-App",
+    featured: false,
+  },
+  {
+    title: "Market Finder",
+    description:
+      "A market research web tool that lets users search and explore financial market data. Clean interface with data visualization and live lookup functionality.",
+    image: MarketFinderImg,
+    tags: ["React", "JavaScript", "REST API", "CSS"],
+    demo: "https://abaxley2.github.io/Market-Finder/",
+    code: "https://github.com/abaxley2/Market-Finder",
+    featured: false,
+  },
+];
 
 const Work = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.08 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div name="work" className="w-full md:h-screen text-[#ccd6f6] bg-[#050A30]">
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 text-[#ccd6f6] border-[#7EC8E3]">
-            Work
+    <div
+      name="work"
+      className="w-full py-24"
+      style={{ background: 'linear-gradient(180deg, var(--navy-dark) 0%, var(--navy-deep) 100%)' }}
+    >
+      <style>{`
+        .work-reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .work-reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+        .project-card {
+          display: flex;
+          flex-direction: column;
+          border-radius: 16px;
+          overflow: hidden;
+          background: rgba(255,255,255,0.04);
+          border: 1px solid rgba(126, 200, 227, 0.12);
+          transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+        }
+        .project-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 24px 48px rgba(0,0,0,0.5), 0 0 32px rgba(126, 200, 227, 0.12);
+          border-color: rgba(126, 200, 227, 0.4);
+        }
+        .featured-badge {
+          background: linear-gradient(135deg, var(--accent-cyan), #4a9eff);
+          color: #030918;
+          font-size: 0.65rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          padding: 3px 10px;
+          border-radius: 20px;
+        }
+        .tag-pill {
+          font-size: 0.7rem;
+          font-weight: 600;
+          letter-spacing: 0.03em;
+          padding: 3px 10px;
+          border-radius: 20px;
+          background: rgba(126, 200, 227, 0.1);
+          color: var(--accent-cyan);
+          border: 1px solid rgba(126, 200, 227, 0.2);
+        }
+        .proj-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          padding: 8px 18px;
+          border-radius: 6px;
+          font-size: 0.82rem;
+          font-weight: 600;
+          transition: all 0.25s ease;
+          cursor: pointer;
+        }
+        .proj-btn-primary {
+          background: var(--accent-cyan);
+          color: var(--navy-deep);
+          border: 1px solid var(--accent-cyan);
+        }
+        .proj-btn-primary:hover {
+          background: transparent;
+          color: var(--accent-cyan);
+          box-shadow: 0 0 16px rgba(126,200,227,0.3);
+        }
+        .proj-btn-ghost {
+          background: transparent;
+          color: var(--text-muted);
+          border: 1px solid rgba(126,200,227,0.2);
+        }
+        .proj-btn-ghost:hover {
+          color: var(--accent-cyan);
+          border-color: var(--accent-cyan);
+        }
+      `}</style>
+
+      <div ref={sectionRef} className="work-reveal max-w-[1100px] mx-auto px-6">
+
+        {/* Heading */}
+        <div className="mb-14">
+          <p className="section-heading">Projects</p>
+          <p className="mt-4 text-base" style={{ color: 'var(--text-muted)' }}>
+            A selection of things I've built.
           </p>
-          <p className="py-6 text-2xl">Check out some of my projects!</p>
         </div>
-        {/* Container */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {/* Grid item 1 */}
-          <div
-            style={{ backgroundImage: `url(${MarketFinder})` }}
-            className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
-          >
-            {/* hover effects */}
-            <div className="opacity-0 group-hover:opacity-100">
-              <span className="text-2xl fond-bold text-[#ccd6f6] tracking-wider">
-                Market Finder
-              </span>
-              <div className="pt-8 text-center">
-                <a
-                  href="https://abaxley2.github.io/Market-Finder/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Demo
-                  </button>
-                </a>
-                <a
-                  href="https://github.com/abaxley2/Market-Finder"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Code
-                  </button>
-                </a>
+
+        {/* Projects grid */}
+        <div className="grid md:grid-cols-3 gap-7">
+          {projects.map((project) => (
+            <div key={project.title} className="project-card">
+
+              {/* Screenshot */}
+              <div className="relative overflow-hidden" style={{ height: '210px' }}>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                />
+                {project.featured && (
+                  <div className="absolute top-3 left-3">
+                    <span className="featured-badge">⭐ Featured</span>
+                  </div>
+                )}
+                {/* gradient fade */}
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background: 'linear-gradient(to bottom, transparent 50%, rgba(5,10,48,0.65) 100%)',
+                  }}
+                />
               </div>
+
+              {/* Body */}
+              <div className="flex flex-col flex-1 p-6 gap-4">
+                <h3
+                  className="text-lg font-bold"
+                  style={{ color: 'var(--text-primary)' }}
+                >
+                  {project.title}
+                </h3>
+
+                <p
+                  className="text-sm leading-relaxed flex-1"
+                  style={{ color: 'var(--text-muted)' }}
+                >
+                  {project.description}
+                </p>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="tag-pill">{tag}</span>
+                  ))}
+                </div>
+
+                {/* Buttons */}
+                <div className="flex gap-3 mt-1 flex-wrap">
+                  {project.demo && (
+                    <a href={project.demo} target="_blank" rel="noreferrer">
+                      <button className="proj-btn proj-btn-primary">
+                        <FaExternalLinkAlt size={11} /> Live Demo
+                      </button>
+                    </a>
+                  )}
+                  <a href={project.code} target="_blank" rel="noreferrer">
+                    <button className="proj-btn proj-btn-ghost">
+                      <FaGithub size={13} /> Code
+                    </button>
+                  </a>
+                </div>
+              </div>
+
             </div>
-          </div>
-          {/* Grid item 2 */}
-          {/* Grid item 3 */}
-          {/* Grid item 4 */}
-          {/* Grid item 5 */}
+          ))}
         </div>
+
+        {/* GitHub CTA */}
+        <div className="mt-14 text-center">
+          <p className="text-sm mb-4" style={{ color: 'var(--text-muted)' }}>
+            Want to see more?
+          </p>
+          <a href="https://github.com/abaxley2" target="_blank" rel="noreferrer">
+            <button className="btn-accent">
+              <FaGithub size={16} /> View All on GitHub
+            </button>
+          </a>
+        </div>
+
       </div>
     </div>
   );

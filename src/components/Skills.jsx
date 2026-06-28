@@ -1,77 +1,84 @@
-import React from "react";
-import HTML from "../assets/HTML.png";
-import CSS from "../assets/CSS.png";
-import JavaScript from "../assets/JavaScript.png";
-import jQuery from "../assets/JQueary.png";
-import MongoDB from "../assets/MongoDB.png";
-import MySQL from "../assets/MySQL.png";
-import Nodejs from "../assets/Node.png";
-import Reactjs from "../assets/Reactjs.png";
-import TailwindCSS from "../assets/TailwindCSS.png";
-import BootstrapCSS from "../assets/BootstrapCSS.png";
-import Firebase from "../assets/FireBase.png";
+import React, { useEffect, useRef } from "react";
+
+// Tech icons via react-icons
+import { SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiNodedotjs, SiMongodb, SiMysql, SiFirebase, SiTailwindcss, SiGit } from "react-icons/si";
+
+const skills = [
+  { name: "HTML",         Icon: SiHtml5,       color: "#e34f26" },
+  { name: "CSS",          Icon: SiCss3,        color: "#264de4" },
+  { name: "JavaScript",   Icon: SiJavascript,  color: "#f7df1e" },
+  { name: "TypeScript",   Icon: SiTypescript,  color: "#3178c6" },
+  { name: "React",        Icon: SiReact,       color: "#61dafb" },
+  { name: "Next.js",      Icon: SiNextdotjs,   color: "#ffffff" },
+  { name: "Node.js",      Icon: SiNodedotjs,   color: "#3c873a" },
+  { name: "MongoDB",      Icon: SiMongodb,     color: "#47a248" },
+  { name: "MySQL",        Icon: SiMysql,       color: "#4479a1" },
+  { name: "Firebase",     Icon: SiFirebase,    color: "#ffca28" },
+  { name: "Tailwind CSS", Icon: SiTailwindcss, color: "#38bdf8" },
+  { name: "Git",          Icon: SiGit,         color: "#f05032" },
+];
 
 const Skills = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div name="skills" className="w-full h-screen bg-[#050A30] text-[#ccd6f6] ">
-      {/* container */}
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div>
-          <p className="text-4xl font-bold inline border-b-4 border-[#7EC8E3]">
-            Experience
-          </p>
-          <p className="py-6 text-2xl">
-            These are some of the technologies I have used
+    <div
+      name="skills"
+      className="w-full py-24"
+      style={{ background: 'var(--navy-dark)' }}
+    >
+      <style>{`
+        .skills-reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+        .skills-reveal.is-visible { opacity: 1; transform: translateY(0); }
+      `}</style>
+
+      <div ref={sectionRef} className="skills-reveal max-w-[1000px] mx-auto px-6">
+
+        {/* Heading */}
+        <div className="mb-12">
+          <p className="section-heading">Skills & Tech</p>
+          <p className="mt-4 text-base" style={{ color: 'var(--text-muted)' }}>
+            Technologies I work with on a regular basis.
           </p>
         </div>
-        {/* boxes */}
-        <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8">
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={HTML} alt="HTML icon" />
-            <p className="my-4">HTML</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={CSS} alt="HTML icon" />
-            <p className="my-4">CSS</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={JavaScript} alt="HTML icon" />
-            <p className="my-4">JavaScript</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={jQuery} alt="HTML icon" />
-            <p className="my-4">JQuery</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={MongoDB} alt="HTML icon" />
-            <p className="my-4">MongoDB</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={MySQL} alt="HTML icon" />
-            <p className="my-4">MySQL</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={Nodejs} alt="HTML icon" />
-            <p className="my-4">Nodejs</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={Reactjs} alt="HTML icon" />
-            <p className="my-4">React</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={TailwindCSS} alt="HTML icon" />
-            <p className="my-4">TailwindCSS</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={BootstrapCSS} alt="HTML icon" />
-            <p className="my-4">BootstrapCSS</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={Firebase} alt="HTML icon" />
-            <p className="my-4">Firebase</p>
-          </div>
-          {/* copy one of the divs above and add below */}
+
+        {/* Skills grid */}
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
+          {skills.map(({ name, Icon, color }, i) => (
+            <div
+              key={name}
+              className="skill-badge group"
+              style={{ animationDelay: `${i * 0.04}s` }}
+            >
+              <Icon
+                size={36}
+                style={{ color, filter: 'drop-shadow(0 0 6px currentColor)', transition: 'transform 0.3s' }}
+                className="group-hover:scale-110"
+              />
+              <p
+                className="text-xs font-semibold text-center"
+                style={{ color: 'var(--text-muted)' }}
+              >
+                {name}
+              </p>
+            </div>
+          ))}
         </div>
+
       </div>
     </div>
   );
