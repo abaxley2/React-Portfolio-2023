@@ -1,24 +1,16 @@
 {
   "files": {
-    "main.css": "/React-Portfolio-2023/static/css/main.7fb0df3a.css",
-    "main.js": "/React-Portfolio-2023/static/js/main.18cb92c1.js",
-    "static/media/Reactjs.png": "/React-Portfolio-2023/static/media/Reactjs.0cf951a69d8e58f83f9d.png",
-    "static/media/Node.png": "/React-Portfolio-2023/static/media/Node.952a9ea986dcfa5229ad.png",
-    "static/media/MongoDB.png": "/React-Portfolio-2023/static/media/MongoDB.2a1528ddc31d4ce8518d.png",
-    "static/media/MySQL.png": "/React-Portfolio-2023/static/media/MySQL.fb7ee748dc690bd686b0.png",
-    "static/media/JQueary.png": "/React-Portfolio-2023/static/media/JQueary.c4444e197930d6d5041c.png",
-    "static/media/HTML.png": "/React-Portfolio-2023/static/media/HTML.2ba4fabc69a89a8f71e6.png",
-    "static/media/TailwindCSS.png": "/React-Portfolio-2023/static/media/TailwindCSS.e47ac876b8d4d0bba47a.png",
-    "static/media/CSS.png": "/React-Portfolio-2023/static/media/CSS.69a82c2d9e45c933a9cb.png",
-    "static/media/FireBase.png": "/React-Portfolio-2023/static/media/FireBase.d725ecadd89697efc832.png",
-    "static/media/Logo.png": "/React-Portfolio-2023/static/media/Logo.8f9cb12d7ec3f877707e.png",
-    "static/media/JavaScript.png": "/React-Portfolio-2023/static/media/JavaScript.1ccd6ef9bb1f9c84ef00.png",
+    "main.css": "/React-Portfolio-2023/static/css/main.f6719a55.css",
+    "main.js": "/React-Portfolio-2023/static/js/main.6cd48e37.js",
+    "static/media/LocksbyLindsay.png": "/React-Portfolio-2023/static/media/LocksbyLindsay.e95eed0952aeda6b47f7.png",
+    "static/media/MarketFinderNew.png": "/React-Portfolio-2023/static/media/MarketFinderNew.4534bbbe6dd6d5e67213.png",
+    "static/media/ChatApp.png": "/React-Portfolio-2023/static/media/ChatApp.96e8255aee5b7b1a9c62.png",
     "index.html": "/React-Portfolio-2023/index.html",
-    "main.7fb0df3a.css.map": "/React-Portfolio-2023/static/css/main.7fb0df3a.css.map",
-    "main.18cb92c1.js.map": "/React-Portfolio-2023/static/js/main.18cb92c1.js.map"
+    "main.f6719a55.css.map": "/React-Portfolio-2023/static/css/main.f6719a55.css.map",
+    "main.6cd48e37.js.map": "/React-Portfolio-2023/static/js/main.6cd48e37.js.map"
   },
   "entrypoints": [
-    "static/css/main.7fb0df3a.css",
-    "static/js/main.18cb92c1.js"
+    "static/css/main.f6719a55.css",
+    "static/js/main.6cd48e37.js"
   ]
 }
