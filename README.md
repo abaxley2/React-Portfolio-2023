@@ -20,7 +20,7 @@ Built with React 18 and Tailwind CSS, deployed to GitHub Pages.
 
 ## Screenshot
 
-![Austin Baxley Portfolio](./src/assets/React-Portfolio.png)
+![Austin Baxley Portfolio](./src/assets/React-Portfolio.png?v=2)
 
 ---
 
