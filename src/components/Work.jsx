@@ -11,7 +11,7 @@ const projects = [
       "High-conversion editorial-style web platform built for a specialist hair studio in Cartersville, GA. Features transparent pricing, live Instagram feed integration, and a dynamic client review slider.",
     image: LocksbyLindsay,
     tags: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS"],
-    demo: null,
+    demo: "https://abaxley2.github.io/locks-by-lindsay",
     code: "https://github.com/abaxley2/locks-by-lindsay",
     featured: true,
   },
